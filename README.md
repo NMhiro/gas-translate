@@ -27,7 +27,7 @@ GAS(Google Apps Script)を使用して文章の翻訳を行います。
 # example
     var data =
     {
-        "credentials" : {"secret" : "your secret key},
+        "credentials" : {"secret" : "your secret key"},
         "translation" :
         {
             "texts": [{"key":"1", "text":"I have a pen."}, {"key":"2","text":"I have an apple."}],
