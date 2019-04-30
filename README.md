@@ -2,11 +2,11 @@
 GAS(Google Apps Script)を使用して文章の翻訳を行います。
 
 # installation
-GASのプロジェクトを作成しtranslate.gsの内容を貼り付けて保存します。
-スクリプトのプロパティにて認証用のキーと値を設定します。
-
-- キー： APP_SECRET
-- 値：任意のシークレットキー
+- GASのプロジェクトにtranslate.gsの内容を貼り付けて保存します。
+https://developers.google.com/apps-script/guides/web
+- スクリプトのプロパティにて認証用のキーと値を設定します。
+  - キー： APP_SECRET
+  - 値：任意のシークレットキー
 
 # usage
 以下のパラメータをPOSTします。
@@ -21,6 +21,10 @@ GASのプロジェクトを作成しtranslate.gsの内容を貼り付けて保�
   - texts ： keyとtextのプロパティを持つオブジェクトの配列。
   - sourceLanguage : 翻訳もととなる言語をあらわす文字列(from)
   - targetLanguage : 翻訳さきとなる言語をあらわす文字列(to)
+
+使用可能な言語については以下参照
+
+https://cloud.google.com/translate/docs/languages
 
 ## example
     var data =
