@@ -26,7 +26,7 @@ https://developers.google.com/apps-script/guides/web
 
 https://cloud.google.com/translate/docs/languages
 
-## example
+# example
     var data =
     {
         "credentials" : {"secret" : "your secret key},
@@ -37,3 +37,14 @@ https://cloud.google.com/translate/docs/languages
             "targetLanguage":"ja"
         }
     };
+    
+    //以下の形式で返す
+    {
+        "translatedTexts" :
+        {
+          "1" : "私はペンを持っている。",
+          "2" : "私はリンゴを持っている。"
+        },
+        "sourceLanguage" : "en",
+        "targetLanguage" : "ja"
+    }
