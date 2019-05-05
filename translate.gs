@@ -3,7 +3,7 @@ function doPost(e) {
 
   var scriptProperties = PropertiesService.getScriptProperties();
   
-  var response = ContentService.createTextOutput()
+  var response = ContentService.createTextOut-put()
   .setMimeType(ContentService.MimeType.JSON);
   
   //-------------------------Authentication-------------------------
@@ -43,11 +43,14 @@ function doPost(e) {
   var advancedArgs = typeof(params.advancedArgs) === 'undefined' ? defaultAvancedArgs : params.advancedArgs;
   
   //-------------------------Translation-------------------------
-  var translatedTexts = {};
+  var translatedTexts = [];
   try
   {
-    texts.forEach(function(text){
-      translatedTexts[text.key] = LanguageApp.translate(text.text, sourceLanguage, targetLanguage, advancedArgs);
+    translatedTexts = texts.map(function(item){
+      var text = {};
+      text.key = item.key;
+      text.text = LanguageApp.translate(item.text, sourceLanguage, targetLanguage, advancedArgs);
+      return text;
     });
   }
   catch(e)
