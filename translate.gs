@@ -135,7 +135,7 @@ var Validation = function(params)
         }
         else
         {
-          msg = 'Request field "translation.' + key + '" is not an Object.';
+          msg = 'Request field "translation.' + key + '" is not an Array.';
           this.errorDetails.push(msg);
         }
         continue;
