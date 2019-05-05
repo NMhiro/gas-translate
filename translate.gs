@@ -3,7 +3,7 @@ function doPost(e) {
 
   var scriptProperties = PropertiesService.getScriptProperties();
   
-  var response = ContentService.createTextOut-put()
+  var response = ContentService.createTextOutput()
   .setMimeType(ContentService.MimeType.JSON);
   
   //-------------------------Authentication-------------------------
